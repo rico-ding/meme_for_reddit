@@ -7,12 +7,11 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
+		<java.version>17</java.version>
 
 		<maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
-		<maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
-		<libgdx.version>1.10.0</libgdx.version>
+		<maven-shade-plugin.version>3.3.0</maven-shade-plugin.version>
+		<libgdx.version>1.11.0</libgdx.version>
 
 		<mainClass>net.thewinnt.meme_for_reddit.Main</mainClass>
 	</properties>
@@ -49,6 +48,10 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<target>${java.version}</target>
+					<source>${java.version}</source>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
